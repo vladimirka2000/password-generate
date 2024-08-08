@@ -1,15 +1,13 @@
 from random import choice
 
+def password(question_1):
 
+    passwords = "+-/*!&$#?=@abcdefghijklnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"
 
-passwords = "+-/*!&$#?=@abcdefghijklnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"
+    result = ""
 
-question_1 = int(input("Сколько символов будет в вашем пароле?"))
+    for i in range(question_1):
+        result += choice(passwords)
 
-result = ""
-
-for i in range(question_1):
-    result += choice(passwords)
-
-print(f"Ваш пароль {result}")
+    return  result
 
